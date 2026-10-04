@@ -11,30 +11,9 @@
 	<a href="https://github.com/linusc9516/tide/contributors"><img src="https://img.shields.io/github/contributors/linusc9516/tide?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
-<!-- TODO: add the catwalk preview and the per-flavor screenshots under assets/
-<p align="center">
-	<img src="assets/preview.webp"/>
-</p>
-
-## Previews
-
-<details>
-<summary>🌻 Latte</summary>
-<img src="assets/latte.webp"/>
-</details>
-<details>
-<summary>🪴 Frappé</summary>
-<img src="assets/frappe.webp"/>
-</details>
-<details>
-<summary>🌺 Macchiato</summary>
-<img src="assets/macchiato.webp"/>
-</details>
-<details>
-<summary>🌿 Mocha</summary>
-<img src="assets/mocha.webp"/>
-</details>
--->
+An unofficial [Catppuccin](https://catppuccin.com) theme for the
+[Tide](https://github.com/IlanCosman/tide) prompt, in all four flavors with a
+selectable accent colour.
 
 ## Usage
 
@@ -113,9 +92,10 @@ Text on a segment uses the flavor's `base` colour.
 </p>
 
 <p align="center">
-	Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+	Copyright &copy; 2026 <a href="https://github.com/linusc9516" target="_blank">Linus C.</a>
+	Palette by <a href="https://github.com/catppuccin/catppuccin" target="_blank">Catppuccin</a>.
 </p>
 
 <p align="center">
-	<a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
+	<a href="LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
 </p>
