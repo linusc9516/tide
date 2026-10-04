@@ -1,60 +1,70 @@
-# Catppuccin for Tide
+<h3 align="center">
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+	Catppuccin for <a href="https://github.com/IlanCosman/tide">Tide</a>
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+</h3>
 
-An unofficial [Catppuccin](https://catppuccin.com) theme for the
-[Tide](https://github.com/IlanCosman/tide) prompt for fish, in all four flavors
-(Latte, Frappé, Macchiato, Mocha) with a selectable accent colour.
+<p align="center">
+	<a href="https://github.com/linusc9516/tide/stargazers"><img src="https://img.shields.io/github/stars/linusc9516/tide?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/linusc9516/tide/issues"><img src="https://img.shields.io/github/issues/linusc9516/tide?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/linusc9516/tide/contributors"><img src="https://img.shields.io/github/contributors/linusc9516/tide?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+</p>
 
-It only sets Tide's colours. Your prompt layout, items and icons from
-`tide configure` are left as they are. It is designed for the "Classic" and
-"Rainbow" styles, where items have a coloured background.
+<!-- TODO: add the catwalk preview and the per-flavor screenshots under assets/
+<p align="center">
+	<img src="assets/preview.webp"/>
+</p>
 
-## Requirements
+## Previews
 
-- [fish](https://fishshell.com) 3.4 or newer
-- [Tide](https://github.com/IlanCosman/tide) v6
-- A terminal with true colour support
-
-## Installation
-
-With [Fisher](https://github.com/jorgebucaran/fisher):
-
-```fish
-fisher install linusc9516/catppuccin-tide
-```
-
-Or copy `functions/catppuccin_tide.fish` and `completions/catppuccin_tide.fish`
-into the matching directories under `~/.config/fish/`.
+<details>
+<summary>🌻 Latte</summary>
+<img src="assets/latte.webp"/>
+</details>
+<details>
+<summary>🪴 Frappé</summary>
+<img src="assets/frappe.webp"/>
+</details>
+<details>
+<summary>🌺 Macchiato</summary>
+<img src="assets/macchiato.webp"/>
+</details>
+<details>
+<summary>🌿 Mocha</summary>
+<img src="assets/mocha.webp"/>
+</details>
+-->
 
 ## Usage
 
-```fish
-catppuccin_tide [-g | --global] FLAVOR [ACCENT]
-```
+Requires [fish](https://fishshell.com) 3.4 or newer, [Tide](https://github.com/IlanCosman/tide) v6
+and a terminal with true colour support.
 
-- `FLAVOR`: `latte`, `frappe`, `macchiato` or `mocha`
-- `ACCENT`: any Catppuccin accent, e.g. `mauve` (the default), `blue`, `peach`
+1. Install the theme with [Fisher](https://github.com/jorgebucaran/fisher):
 
-There are two ways to apply it:
+   ```fish
+   fisher install linusc9516/tide
+   ```
 
-**Once, saved permanently.** This writes universal variables, the same way
-`tide configure` does. Run it a single time:
+   Or copy `functions/catppuccin_tide.fish` and `completions/catppuccin_tide.fish`
+   into the matching directories under `~/.config/fish/`.
 
-```fish
-catppuccin_tide mocha
-```
+2. Apply a flavor, optionally with an accent (the default is `mauve`):
 
-**On every shell start.** If your fish config lives in a dotfiles repository
-and you do not track `fish_variables`, call it from `config.fish` with `-g`.
-This sets exported global variables for the session only:
+   ```fish
+   catppuccin_tide mocha
+   catppuccin_tide latte peach
+   ```
 
-```fish
-catppuccin_tide -g mocha
-```
+   This saves the colours as universal variables, the same way `tide configure`
+   does, so it only has to be run once.
 
-Global variables take precedence over universal ones, so do not combine `-g`
-with another Tide theme that is applied the same way.
+Only Tide's colours are changed. Your prompt layout, items and icons from
+`tide configure` are left as they are. The theme is designed for the "Classic"
+and "Rainbow" styles, where items have a coloured background.
 
-## Colours
+### Colours
 
 Text on a segment uses the flavor's `base` colour.
 
@@ -75,14 +85,37 @@ Text on a segment uses the flavor's `base` colour.
 | containers (`distrobox`, `toolbox`) | teal |
 | `vi_mode` | blue (normal), green (insert), red (replace), mauve (visual) |
 
-## Uninstalling
+## 🙋 FAQ
 
-```fish
-fisher remove linusc9516/catppuccin-tide
-```
+- Q: **_"How can I keep the theme in my dotfiles instead of in universal variables?"_**\
+  A: Call it from `config.fish` with `-g`. This sets exported global variables
+  for the session only, so nothing is written to `fish_variables`:
 
-The colour variables stay set. Run `tide configure` to pick new colours.
+  ```fish
+  catppuccin_tide -g mocha
+  ```
 
-## Licence
+  Global variables take precedence over universal ones, so do not combine `-g`
+  with another Tide theme that is applied the same way.
 
-[MIT](LICENSE). Palette by [Catppuccin](https://github.com/catppuccin/catppuccin).
+- Q: **_"How do I go back to my old colours?"_**\
+  A: Run `fisher remove linusc9516/tide`, then `tide configure` to pick new
+  colours. The variables set by this theme are not erased on removal.
+
+## 💝 Thanks to
+
+- [Linus C.](https://github.com/linusc9516)
+
+&nbsp;
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
+</p>
+
+<p align="center">
+	Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+</p>
+
+<p align="center">
+	<a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
+</p>
